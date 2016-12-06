@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  liza</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.8.5/rzslider.min.js'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.8.5/rzslider.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://bootswatch.com/superhero/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div ng-app="App" ng-controller="Students">
+<div class="row">
+   <div class="col-md-4">
+                         <ul>
+
+                             <!--  бокс -->
+
+<select ng-model="selectedName" ng-options="x for x in names">
+                         </select>
+                             <!--  бокс -->
+
+                             <!--  кнопки -->
+    
+    <div class="left_block"><ul>
+    <li ng-repeat="student in solutions" ng-show="student.group==selectedName">
+
+    <input class="btnen" type="button" value={{student.username}} ng-click=user(student)
+           
+           </input>
+    </li>
+    </ul></div>
+   <!--  кнопки --> 
+
+     
+      <!--  текстовое поле  --> 
+   </div>
+   <div class="col-md-8">
+
+                          <div class="centerdiv">
+ <textarea class="code" ng-model="Actstudent.code" ></textarea>
+    </div>
+                       </centre>
+
+       <!--  текстовое поле  -->
+
+
+       <!--  группы присвоить  -->
+
+
+       <select ng-model="studentGroup" ng-options="x for x in names">
+       </select>
+       <button class="btnen" ng-click="PutGroup()">Присвоить группу </button>
+
+
+       <!--  группы присвоить  -->
+
+
+
+       <!--  слайдер  -->
+
+       <rzslider rz-slider-model="priceSlider">
+       </rzslider>
+
+       <!--  слайдер  -->
+       <textarea class="code2"  > рейтинг={{Actstudent.rating}}
+Компьютер= {{Actstudent.ip}}
+</textarea>
+
+       </ul>
+       <button class="btnen" ng-click="SendRating1()">отправить рейтинг</button>
+
+
+
+
+   </div>
+</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.8.5/rzslider.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

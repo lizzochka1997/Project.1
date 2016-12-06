@@ -1,0 +1,22 @@
+.btnen {
+  height: 30px;
+  width: 150px;
+  margin: 5px;
+  background: red;
+}
+
+.code2
+{
+  height: 65px;
+  width: 45%;
+  float: left;
+  color: black;
+}
+.code {
+  height: 450px;
+  width: 45%;
+  margin-top: 10px;
+  float: center;
+  margin-left: 100px;
+  color: black;
+}
