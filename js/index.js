@@ -10,10 +10,8 @@ angular.module("App", ['rzModule'])
         $scope.PutGroup = function ()
         {
             $scope.Actstudent.group = $scope.studentGroup;
-            $scope.Actstudent.group
 
-
-            $http.post("http://192.168.3.36:3000/group", $scope.Actstudent).then(function (res) {
+            $http.post("http://192.168.3.36:3000/save", $scope.Actstudent).then(function (res) {
 
             });
 
